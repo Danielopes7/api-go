@@ -1,4 +1,4 @@
-module api-postgresql
+module github.com/Danielopes7/api-go
 
 go 1.23.4
 

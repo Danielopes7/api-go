@@ -3,8 +3,7 @@ package db
 import (
 	"database/sql"
 	"fmt"
-
-	"github.com/danielopes7/api-postgresql/configs"
+	"github.com/Danielopes7/api-go"
 	_ "github.com/lib/pq"
 )
 
