@@ -4,7 +4,7 @@ import (
 	"github.com/Danielopes7/api-go/db"
 )
 
-func GetAll(id int64) (todos []Todo, err error) {
+func GetAll() (todos []Todo, err error) {
 	db, err := db.OpenConnection()
 
 	if err != nil {

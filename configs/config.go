@@ -1,6 +1,7 @@
 package configs
 
 import "github.com/spf13/viper"
+
 var cfg *config
 
 type config struct {
@@ -23,13 +24,13 @@ type DBConfig struct {
 func init() {
 	viper.SetDefault("API.Port", "9000")
 	viper.SetDefault("database.host", "localhost")
-	viper.setDefault("database.port", "5432")
+	viper.SetDefault("database.port", "5432")
 }
 
 func Load() error {
 	viper.SetConfigName("config")
-	viper.setConfigType("toml")
-	viper.addConfigPath(".")
+	viper.SetConfigType("toml")
+	viper.AddConfigPath(".")
 
 	err := viper.ReadInConfig()
 	if err != nil {
@@ -57,6 +58,6 @@ func GetDB() DBConfig {
 	return cfg.DB
 }
 
-func GetServerPort() string{
+func GetServerPort() string {
 	return cfg.API.Port
 }

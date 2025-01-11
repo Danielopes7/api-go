@@ -9,7 +9,7 @@ import (
 	"github.com/Danielopes7/api-go/models"
 )
 
-func create(w http.ResponseWriter, r *http.Request) {
+func Create(w http.ResponseWriter, r *http.Request) {
 	var todo models.Todo
 
 	err := json.NewDecoder(r.Body).Decode(&todo)

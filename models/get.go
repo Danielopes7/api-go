@@ -13,7 +13,7 @@ func Get(id int64) (todo Todo, err error) {
 
 	defer db.Close()
 
-	row := db.QueryRow(`SELECT * FROM todo WHERE id = $1`, id)
+	row := db.QueryRow(`SELECT * FROM todos WHERE id = $1`, id)
 	if err != nil {
 		return
 	}
